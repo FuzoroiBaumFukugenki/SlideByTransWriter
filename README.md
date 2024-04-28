@@ -1,6 +1,7 @@
 # SlideByTransWriter
-
 PowerPointでテキストボックスの真下に，翻訳文入りのテキストボックスをワンクリックで生成．多言語併記を助けます．
+
+https://github.com/FuzoroiBaumFukugenki/SlideByTransWriter/assets/147458822/9f80f6a4-daa1-4f4e-bf47-9db374cf7b49
 
 <div align="center">
 
@@ -11,6 +12,8 @@ PowerPointでテキストボックスの真下に，翻訳文入りのテキス�
     <img src="https://img.shields.io/badge/windows-0078D6?logo=windows&logoColor=white">
     <img src="https://img.shields.io/badge/Python-14354C.svg?logo=python&logoColor=white">
     <img src="https://img.shields.io/badge/Microsoft PowerPoint-B7472A?logo=microsoft-powerpoint&logoColor=white">
+
+    
   </p>
 
   [日本語版](#日本語版)
