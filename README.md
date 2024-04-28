@@ -27,6 +27,14 @@ https://github.com/FuzoroiBaumFukugenki/SlideByTransWriter/assets/147458822/9f80
 - windows10もしくは11
 - Microsoft 365およびPowerPointが導入済み
 
+## ファイル構成
+SlideByTransWriter-main<br>
+ ┣Demo_SlideByTransWriter.mp4　翻訳実行のデモ動画です<br>
+ ┣LICENSE<br>
+ ┣README.md<br>
+ ┣SlideByTransWriter.pptm　　　　動作確認兼アドイン作成用のパワポです<br>
+ ┣translator.exe　　　　　　　　　翻訳を実行するexeファイルです．パワポのVBAでこれをたたきます<br>
+ ┗translator.py　　　　　　　　 　exeファイルのもとになっているpythonです．<br>
 
 ## セットアップ
 
@@ -36,7 +44,6 @@ https://github.com/FuzoroiBaumFukugenki/SlideByTransWriter/assets/147458822/9f80
 2. このとき，設置したフォルダのパスをメモ帳などに記録しておく．
    - 以降，このパスをTRANSLATOR_PATHとする．
    - 例：TRANSLATOR_PATH = "C:/slideByTransWriter_Translator"(translator.exeは含まない)
-   - 「TRANSLATOR_PATH/translator.exe」が日本語を入力に英語を出力してくれるソフトです．Pythonでできてます．詳細は
 
 ### マクロを動作できるようにする＆翻訳文のフォントを変える
 
