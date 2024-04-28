@@ -69,7 +69,7 @@ https://github.com/FuzoroiBaumFukugenki/SlideByTransWriter/assets/147458822/9f80
 5. ”こんにちは”など任意の日本語が書かれたテキストボックスを選択後「SlideByTransWriterタブ>Insert Translated text」をクリックすると翻訳されることを確認．
     - ここからはデモ映像の最後の方に収録されています．
     - 言語選択タブなどありますが，Insert Translated textボタン以外動作しませんので注意してください．
-6. 「SlideByTransWriterタブ>Insert Translated text」を右クリックし「クイックアクセスツールバーに追加」を選択．
+6. (クイックアクセスツールバーに翻訳マークがない場合)「SlideByTransWriterタブ>Insert Translated text」を右クリックし「クイックアクセスツールバーに追加」を選択．
 7. Altキーを押すとショートカットのガイドが出てくるので，それに応じてショートカットで翻訳できることを確認する．
     - 開発者の環境（デモ映像）だとAlt+8キーでしたが，個人ごと既存のクイックアクセスツールなどにより変わってきます．
 
