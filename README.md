@@ -43,14 +43,17 @@ https://github.com/FuzoroiBaumFukugenki/SlideByTransWriter/assets/147458822/9f80
 1. SlideByTransWriter.pptmを右クリックし，プロパティを開く
 2. 「全般>セキュリティ」から「許可する」にチェックを入れ，「適用」をクリック．
     - マクロを実行するために必要です．これが許諾できない場合，あきらめてください．
+    - 人によっては必要ない項目です
 3. SlideByTransWriter.pptmを開く．
-4. 「開発タブ>Visual Basic」よりVBAのエディタを開く．
-5. VBAのエディタの左側のプロジェクトペインから「標準モジュール」を展開，「Module1」を開きSlideByTransWriterのVBAマクロが記述されていることを確認．
-6. ここでVBAマクロの一番下までスクロールし，変数の中身を変える形でDeepLのAPIキーとTRANSLATOR_PATHを入力する．また，同様にして翻訳文のフォントの変えることができる．
+    - 編集を許可してください
+5. 「開発タブ>Visual Basic」よりVBAのエディタを開く．
+    - 開発タブがない場合，「ファイルタブ>オプション>リボンのユーザー設定」より「開発」にチェックを入れてください
+7. VBAのエディタの左側のプロジェクトペインから「標準モジュール」を展開，「Module1」を開きSlideByTransWriterのVBAマクロが記述されていることを確認．
+8. ここでVBAマクロの一番下までスクロールし，変数の中身を変える形でDeepLのAPIキーとTRANSLATOR_PATHを入力する．また，同様にして翻訳文のフォントの変えることができる．
     - DeepLのAPIキーの入手はこちらなどを参考にしてください．[DeepL API用のAPIキー – DeepLヘルプセンター | どんなことでお困りですか？](https://support.deepl.com/hc/ja/articles/360020695820-DeepL-API%E7%94%A8%E3%81%AEAPI%E3%82%AD%E3%83%BC)
-7. 「こんにちは」など文書を選択した状態で，再生ボタンマークからVBAを実行．SlideByTransWriterの動作確認をする．
-8. 満足のいくフォントに調整し終わるまで，6,7を繰り返す．
-9.  以降「開発タブ>マクロ>SlideByTransWriter>実行」より都度翻訳できるようになる．
+9. 「こんにちは」など文書を選択した状態で，再生ボタンマークからVBAを実行．SlideByTransWriterの動作確認をする．
+10. 満足のいくフォントに調整し終わるまで，6,7を繰り返す．
+11.  以降「開発タブ>マクロ>SlideByTransWriter>実行」より都度翻訳できるようになる．
 
 ### SlideByTransWriterのアドイン化
 
