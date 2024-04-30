@@ -1,54 +1,53 @@
-Attribute VB_Name = "Module1"
 '//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 'SlideByTransWriter
-'‘æ‚PŒ¾Œê‚ÌŒã‚É‘æ‚QŒ¾Œê‚ğƒƒ“ƒNƒŠƒbƒNiorƒVƒ‡[ƒgƒJƒbƒgj‚Å•¹‹L‚·‚éƒAƒhƒCƒ“D
-'ˆê”Ô‰º‚Ü‚ÅƒXƒNƒ[ƒ‹‚µ‚ÄCu====“ü—Í—“====vƒpƒ‰ƒ[ƒ^‚ğ•ÒW‚·‚é‚±‚Æ‚ÅCƒtƒHƒ“ƒgƒTƒCƒY‚È‚Ç‚ğw’è‚Å‚«‚éD
-'ƒŠƒ{ƒ“‚ÉƒtƒH[ƒ€‚ğì‚Á‚½‚ªCˆê”Ô¶‚Ìƒ{ƒ^ƒ“ˆÈŠO‹@”\‚µ‚È‚¢‚Ì‚Å’ˆÓDƒtƒH[ƒ€‚©‚çƒeƒLƒXƒg‚ğæ“¾‚·‚éƒR[ƒ‹ƒoƒbƒN‚ª‚©‚¯‚È‚©‚Á‚½‚Ì‚ÅC—Lu‹ƒ€D
-'Deepl‚ÌAPIƒL[‚ªŠÔˆá‚Á‚Ä‚¢‚é‚ÆƒtƒŠ[ƒY‚µ‚Ü‚·D
+'ç¬¬ï¼‘è¨€èªã®å¾Œã«ç¬¬ï¼’è¨€èªã‚’ãƒ¯ãƒ³ã‚¯ãƒªãƒƒã‚¯ï¼ˆorã‚·ãƒ§ãƒ¼ãƒˆã‚«ãƒƒãƒˆï¼‰ã§ä½µè¨˜ã™ã‚‹ã‚¢ãƒ‰ã‚¤ãƒ³ï¼
+'ä¸€ç•ªä¸‹ã¾ã§ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã—ã¦ï¼Œã€Œ====å…¥åŠ›æ¬„====ã€ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’ç·¨é›†ã™ã‚‹ã“ã¨ã§ï¼Œãƒ•ã‚©ãƒ³ãƒˆã‚µã‚¤ã‚ºãªã©ã‚’æŒ‡å®šã§ãã‚‹ï¼
+'ãƒªãƒœãƒ³ã«ãƒ•ã‚©ãƒ¼ãƒ ã‚’ä½œã£ãŸãŒï¼Œä¸€ç•ªå·¦ã®ãƒœã‚¿ãƒ³ä»¥å¤–æ©Ÿèƒ½ã—ãªã„ã®ã§æ³¨æ„ï¼ãƒ•ã‚©ãƒ¼ãƒ ã‹ã‚‰ãƒ†ã‚­ã‚¹ãƒˆã‚’å–å¾—ã™ã‚‹ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯ãŒã‹ã‘ãªã‹ã£ãŸã®ã§ï¼Œæœ‰å¿—æ±‚ãƒ ï¼
+'Deeplã®APIã‚­ãƒ¼ãŒé–“é•ã£ã¦ã„ã‚‹ã¨ãƒ•ãƒªãƒ¼ã‚ºã—ã¾ã™ï¼
 '
-'ƒ‰ƒCƒuƒ‰ƒŠƒŠƒtƒ@ƒŒƒ“ƒXFˆÈ‰ºURL‚©‚çPowerPointQÆ
-'[Visual Basic for Applications (VBA) ‚Ìƒ‰ƒCƒuƒ‰ƒŠ ƒŠƒtƒ@ƒŒƒ“ƒX | Microsoft Learn](https://learn.microsoft.com/ja-jp/office/vba/api/overview/library-reference)
+'ãƒ©ã‚¤ãƒ–ãƒ©ãƒªãƒªãƒ•ã‚¡ãƒ¬ãƒ³ã‚¹ï¼šä»¥ä¸‹URLã‹ã‚‰PowerPointå‚ç…§
+'[Visual Basic for Applications (VBA) ã®ãƒ©ã‚¤ãƒ–ãƒ©ãƒª ãƒªãƒ•ã‚¡ãƒ¬ãƒ³ã‚¹ | Microsoft Learn](https://learn.microsoft.com/ja-jp/office/vba/api/overview/library-reference)
 '
-'‘Î‰Œ¾Œêˆê——
+'å¯¾å¿œè¨€èªä¸€è¦§
 '[OpenAPI spec for text translation | English | DeepL API Docs](https://developers.deepl.com/docs/api-reference/translate/openapi-spec-for-text-translation)
-'‘S‘Ì‚ğ’Ê‚µ‚ÄC–|–ó‘O‚ğsource,–|–óŒã‚ğtarget‚Æ‚·‚é
+'å…¨ä½“ã‚’é€šã—ã¦ï¼Œç¿»è¨³å‰ã‚’source,ç¿»è¨³å¾Œã‚’targetã¨ã™ã‚‹
 '//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Public Declare PtrSafe Sub Sleep Lib "kernel32" (ByVal dwMilliseconds As LongPtr) 'Sleep•¶‚ğg‚¤‚½‚ß‚Ì‚¨‚Ü‚¶‚È‚¢
+Public Declare PtrSafe Sub Sleep Lib "kernel32" (ByVal dwMilliseconds As LongPtr) 'Sleepæ–‡ã‚’ä½¿ã†ãŸã‚ã®ãŠã¾ã˜ãªã„
 
 
-'Œ»İ‘I‘ğ‚µ‚Ä‚¢‚éƒeƒLƒXƒgƒ{ƒbƒNƒX‚ÌƒeƒLƒXƒg‚ğæ“¾
+'ç¾åœ¨é¸æŠã—ã¦ã„ã‚‹ãƒ†ã‚­ã‚¹ãƒˆãƒœãƒƒã‚¯ã‚¹ã®ãƒ†ã‚­ã‚¹ãƒˆã‚’å–å¾—
 Function get_select_shape_text() As String
 
-    With ActiveWindow.Selection.ShapeRange 'Œ»İ‘I‘ğ‚µ‚Ä‚¢‚é}Œ`iƒeƒLƒXƒgƒ{ƒbƒNƒXŠÜ‚Şj
+    With ActiveWindow.Selection.ShapeRange 'ç¾åœ¨é¸æŠã—ã¦ã„ã‚‹å›³å½¢ï¼ˆãƒ†ã‚­ã‚¹ãƒˆãƒœãƒƒã‚¯ã‚¹å«ã‚€ï¼‰
     
-        Dim source_text As String: source_text = .TextFrame2.TextRange.Text 'ƒeƒLƒXƒg‚ğæ“¾
+        Dim source_text As String: source_text = .TextFrame2.TextRange.Text 'ãƒ†ã‚­ã‚¹ãƒˆã‚’å–å¾—
         Debug.Print source_text
         get_select_shape_text = source_text
         
     End With
 End Function
 
-'Œ»İ‘I‘ğ‚µ‚Ä‚¢‚étextbox‚Ì‰º‚É‚ ‚é‘å‚«‚³‚Ìtarget-textbox‚ğ¶¬‚·‚é
+'ç¾åœ¨é¸æŠã—ã¦ã„ã‚‹textboxã®ä¸‹ã«ã‚ã‚‹å¤§ãã•ã®target-textboxã‚’ç”Ÿæˆã™ã‚‹
 Function create_target_textbox(target_text As String, indent_width As Double, target_textbox_height As Double, tb_bold As Boolean, tb_color As Long, tb_size As Double, tb_fontname As String)
 
-    With ActiveWindow.Selection.ShapeRange 'Œ»İ‘I‘ğ‚µ‚Ä‚¢‚é}Œ`itextboxŠÜ‚Şj
+    With ActiveWindow.Selection.ShapeRange 'ç¾åœ¨é¸æŠã—ã¦ã„ã‚‹å›³å½¢ï¼ˆtextboxå«ã‚€ï¼‰
     
-        'target-textbox‚ÌLeft‚Ísource-textbox‚ÌLeft+ƒCƒ“ƒfƒ“ƒg•
+        'target-textboxã®Leftã¯source-textboxã®Left+ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆå¹…
         Dim target_textbox_left As Double: target_textbox_left = .Left + indent_width
-        'target-textbox‚ÌTop‚Ísource-textbox‚Ì‰º’[
+        'target-textboxã®Topã¯source-textboxã®ä¸‹ç«¯
         Dim target_textbox_top As Double: target_textbox_top = .Top + .Height
-        'target-textbox‚ÌWidth‚Ísource-textbox‚Æ“¯‚¶
+        'target-textboxã®Widthã¯source-textboxã¨åŒã˜
         Dim target_textbox_width As Double: target_textbox_width = .width
         
-        Set active_window = ActiveWindow.Selection.SlideRange '¶¬‚Ì“s‡ãCŒ»İƒAƒNƒeƒBƒu‚ÈƒXƒ‰ƒCƒh‚ÌƒIƒuƒWƒFƒNƒg‚ğ“¾‚Ä‚¨‚­
+        Set active_window = ActiveWindow.Selection.SlideRange 'ç”Ÿæˆã®éƒ½åˆä¸Šï¼Œç¾åœ¨ã‚¢ã‚¯ãƒ†ã‚£ãƒ–ãªã‚¹ãƒ©ã‚¤ãƒ‰ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å¾—ã¦ãŠã
         
-        'target-textbox‚ğ¶¬
-        Dim target_textbox As Shape: Set target_textbox = active_window.Shapes.AddTextbox(Orientation:=msoTextOrientationHorizontal, Left:=target_textbox_left, Top:=target_textbox_top, width:=target_textbox_width, Height:=target_textbox_height) 'AddTextbox(•¶š‚ÌŒü‚«C¶ã“_xÀ•WC¶ã“_yÀ•W,ƒ{ƒbƒNƒX‚Ì•C‚‚³)
+        'target-textboxã‚’ç”Ÿæˆ
+        Dim target_textbox As Shape: Set target_textbox = active_window.Shapes.AddTextbox(Orientation:=msoTextOrientationHorizontal, Left:=target_textbox_left, Top:=target_textbox_top, width:=target_textbox_width, Height:=target_textbox_height) 'AddTextbox(æ–‡å­—ã®å‘ãï¼Œå·¦ä¸Šç‚¹xåº§æ¨™ï¼Œå·¦ä¸Šç‚¹yåº§æ¨™,ãƒœãƒƒã‚¯ã‚¹ã®å¹…ï¼Œé«˜ã•)
         
         'Debug.Print tb_bold
         With target_textbox.TextFrame.TextRange
-            .Text = target_text '.TextFrame.TextRange.Text ="“à—e"
+            .Text = target_text '.TextFrame.TextRange.Text ="å†…å®¹"
             .Font.Bold = tb_bold
             .Font.Color.RGB = tb_color
             .Font.Size = tb_size
@@ -64,71 +63,71 @@ Function create_shell_arg(arg As String) As String
     create_shell_arg = shell_arg
 End Function
 
-'–|–ó
+'ç¿»è¨³
 Function translate(source_text As String, source_lang As String, target_lang As String, api_key As String, exe_folder As String) As String
 
-    ' ShellŠÖ”‚ğg—p‚µ‚ÄPythonƒXƒNƒŠƒvƒg‚ğÀs
-    Dim translate_cmd As String: translate_cmd = create_shell_arg(exe_folder & "\translator.exe") & create_shell_arg(source_text) & create_shell_arg(source_lang) & create_shell_arg(target_lang) & create_shell_arg(api_key) & create_shell_arg(exe_folder) ' xxx.exe ˆø”1 ˆø”2...‚ÌŒ`®‚ÌƒRƒ}ƒ“ƒh
-    Debug.Print translate_cmd 'ƒRƒ}ƒ“ƒh“à—eŠm”F
-    Shell translate_cmd, vbHide 'ƒRƒ}ƒ“ƒh”­“®
+    ' Shellé–¢æ•°ã‚’ä½¿ç”¨ã—ã¦Pythonã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’å®Ÿè¡Œ
+    Dim translate_cmd As String: translate_cmd = create_shell_arg(exe_folder & "\translator.exe") & create_shell_arg(source_text) & create_shell_arg(source_lang) & create_shell_arg(target_lang) & create_shell_arg(api_key) & create_shell_arg(exe_folder) ' xxx.exe å¼•æ•°1 å¼•æ•°2...ã®å½¢å¼ã®ã‚³ãƒãƒ³ãƒ‰
+    Debug.Print translate_cmd 'ã‚³ãƒãƒ³ãƒ‰å†…å®¹ç¢ºèª
+    Shell translate_cmd, vbHide 'ã‚³ãƒãƒ³ãƒ‰ç™ºå‹•
     
-    '–|–óŒê•¶‘‚ÌƒeƒLƒXƒgƒtƒ@ƒCƒ‹‚ªŠi”[‚³‚ê‚é—\’è‚ÌƒpƒX
+    'ç¿»è¨³èªæ–‡æ›¸ã®ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚¡ã‚¤ãƒ«ãŒæ ¼ç´ã•ã‚Œã‚‹äºˆå®šã®ãƒ‘ã‚¹
     Dim target_text_path As String
     target_text_path = exe_folder & "\translated.txt"
     'Debug.Print target_text_path
     
-    '–|–óŒê•¶‘‚ÌƒeƒLƒXƒgƒtƒ@ƒCƒ‹‚ª¶¬‚³‚ê‚Ä‚È‚¢‚È‚ç‚ÎC‚Ü‚¾–|–óI‚í‚Á‚Ä‚È‚¢‚Ì‚Å‘Ò‚Â
+    'ç¿»è¨³èªæ–‡æ›¸ã®ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚¡ã‚¤ãƒ«ãŒç”Ÿæˆã•ã‚Œã¦ãªã„ãªã‚‰ã°ï¼Œã¾ã ç¿»è¨³çµ‚ã‚ã£ã¦ãªã„ã®ã§å¾…ã¤
     Do While Dir(target_text_path) = ""
         'Debug.Print "wait"
-        Sleep 10 '‚±‚ÌƒXƒŠ[ƒv‚ª‚È‚¢‚ÆC‹•–³while‹–‚³‚È‚¢ƒ}ƒ“‚É‚æ‚èƒGƒ‰[‹N‚±‚é
+        Sleep 10 'ã“ã®ã‚¹ãƒªãƒ¼ãƒ—ãŒãªã„ã¨ï¼Œè™šç„¡whileè¨±ã•ãªã„ãƒãƒ³ã«ã‚ˆã‚Šã‚¨ãƒ©ãƒ¼èµ·ã“ã‚‹
     Loop
         
-    Dim target_text As String '–|–óŒê•¶‘
+    Dim target_text As String 'ç¿»è¨³èªæ–‡æ›¸
     
-    ' –|–óŒê•¶‘‚ÌƒeƒLƒXƒgƒtƒ@ƒCƒ‹‚©‚ç“Ç‚İ‚İ
+    ' ç¿»è¨³èªæ–‡æ›¸ã®ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰èª­ã¿è¾¼ã¿
     Open target_text_path For Input As #1
             Line Input #1, target_text
     Close #1
     
-    Debug.Print target_text '–|–óŒê•¶‘‚ÌŠm”F
+    Debug.Print target_text 'ç¿»è¨³èªæ–‡æ›¸ã®ç¢ºèª
     'Debug.Print target_text_path
-    Kill target_text_path ' –|–óŒê•¶‘‚ÌƒeƒLƒXƒgƒtƒ@ƒCƒ‹‚ğÁ‹@‚±‚Ìƒtƒ@ƒCƒ‹‚Ì—L–³‚Å–|–ó‘Ò‚¿‚ğ”»’f‚·‚é‚Ì‚ÅCÁ‚µ‚Ä‚¨‚­
+    Kill target_text_path ' ç¿»è¨³èªæ–‡æ›¸ã®ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚¡ã‚¤ãƒ«ã‚’æ¶ˆå»ã€€ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã®æœ‰ç„¡ã§ç¿»è¨³å¾…ã¡ã‚’åˆ¤æ–­ã™ã‚‹ã®ã§ï¼Œæ¶ˆã—ã¦ãŠã
     
     translate = target_text
 
 End Function
 
 
-'ƒƒCƒ“ŠÖ”‚İ‚½‚¢‚È‚à‚ñ
+'ãƒ¡ã‚¤ãƒ³é–¢æ•°ã¿ãŸã„ãªã‚‚ã‚“
 Sub SlideByTransWriter()
 
-    '===============================“ü—Í—“===========================================================================================================================================================
+    '===============================å…¥åŠ›æ¬„===========================================================================================================================================================
     
-    '–|–óŒ¾Œêİ’è’l / Translation language setpoint / Example Japanese:JA, English:EN
-    Dim source_lang As String: source_lang = "JA" '–|–ó‘OŒ¾Œê / pre-translated language
-    Dim target_lang As String: target_lang = "EN" '–|–óŒãŒ¾Œê / post-translational language
+    'ç¿»è¨³è¨€èªè¨­å®šå€¤ / Translation language setpoint / Example Japanese:JA, English:EN
+    Dim source_lang As String: source_lang = "JA" 'ç¿»è¨³å‰è¨€èª / pre-translated language
+    Dim target_lang As String: target_lang = "EN" 'ç¿»è¨³å¾Œè¨€èª / post-translational language
     
-    '–|–óƒT[ƒrƒX‚Ü‚í‚è‚Ìİ’è’l / Set values around translation services
+    'ç¿»è¨³ã‚µãƒ¼ãƒ“ã‚¹ã¾ã‚ã‚Šã®è¨­å®šå€¤ / Set values around translation services
     Dim api_key As String: api_key = "xxxxxxxxxxxxxx" 'DeepL API Key
-    Dim exe_folder As String: exe_folder = "yyyyyyyyyyyyyyyyy" 'translator.exe‚Ì‚ ‚éƒtƒHƒ‹ƒ_ / Folder with translator.exe
+    Dim exe_folder As String: exe_folder = "yyyyyyyyyyyyyyyyy" 'translator.exeã®ã‚ã‚‹ãƒ•ã‚©ãƒ«ãƒ€ / Folder with translator.exe
     
-    'TextBox‚ÌƒtƒHƒ“ƒg‚Ìİ’è’l / Font setting value for TextBox
-    Dim tb_bold As Boolean: tb_bold = False '‘¾š‚É‚·‚é‚È‚çTrue,‚»‚¤‚Å‚È‚¢‚È‚çFalse
-    Dim tb_color As Long: tb_color = RGB(166, 166, 166) 'ƒtƒHƒ“ƒg‚ÌF
-    Dim tb_size As Double: tb_size = 20 'ƒtƒHƒ“ƒgƒTƒCƒY
+    'TextBoxã®ãƒ•ã‚©ãƒ³ãƒˆã®è¨­å®šå€¤ / Font setting value for TextBox
+    Dim tb_bold As Boolean: tb_bold = False 'å¤ªå­—ã«ã™ã‚‹ãªã‚‰True,ãã†ã§ãªã„ãªã‚‰False
+    Dim tb_color As Long: tb_color = RGB(166, 166, 166) 'ãƒ•ã‚©ãƒ³ãƒˆã®è‰²
+    Dim tb_size As Double: tb_size = 20 'ãƒ•ã‚©ãƒ³ãƒˆã‚µã‚¤ã‚º
     Dim tb_fontname As String: tb_fontname = "Arial"
     
-    'TextBox‚ÌˆÊ’u‚â‘å‚«‚³‚Ìİ’è’l / Set values for TextBox position and size
-    Dim indent_width As Double: indent_width = 50 'ƒCƒ“ƒfƒ“ƒg•[pt] / indent width[pt]
-    Dim target_textbox_height As Double: target_textbox_height = 40 '–|–óŒãƒeƒLƒXƒgƒ{ƒbƒNƒX‚Ì‚‚³[pt]DƒtƒHƒ“ƒgƒTƒCƒY‚æ‚è‘å‚«‚­‚·‚é‚±‚ÆD/ Height of the text box after translation [pt]. Should be larger than the font size.
+    'TextBoxã®ä½ç½®ã‚„å¤§ãã•ã®è¨­å®šå€¤ / Set values for TextBox position and size
+    Dim indent_width As Double: indent_width = 50 'ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆå¹…[pt] / indent width[pt]
+    Dim target_textbox_height As Double: target_textbox_height = 40 'ç¿»è¨³å¾Œãƒ†ã‚­ã‚¹ãƒˆãƒœãƒƒã‚¯ã‚¹ã®é«˜ã•[pt]ï¼ãƒ•ã‚©ãƒ³ãƒˆã‚µã‚¤ã‚ºã‚ˆã‚Šå¤§ããã™ã‚‹ã“ã¨ï¼/ Height of the text box after translation [pt]. Should be larger than the font size.
     
-    '===============================“ü—Í—“===========================================================================================================================================================
+    '===============================å…¥åŠ›æ¬„===========================================================================================================================================================
         
-    Dim source_text As String: source_text = get_select_shape_text() 'Œ»İ‘I‘ğ‚µ‚Ä‚¢‚étextbox‚ÌƒeƒLƒXƒg=source-text‚ğæ“¾
+    Dim source_text As String: source_text = get_select_shape_text() 'ç¾åœ¨é¸æŠã—ã¦ã„ã‚‹textboxã®ãƒ†ã‚­ã‚¹ãƒˆ=source-textã‚’å–å¾—
     
-    Dim target_text As String: target_text = translate(source_text, source_lang, target_lang, api_key, exe_folder) '–|–ó‚µCtarget-text‚ğæ“¾
+    Dim target_text As String: target_text = translate(source_text, source_lang, target_lang, api_key, exe_folder) 'ç¿»è¨³ã—ï¼Œtarget-textã‚’å–å¾—
     
-    Call create_target_textbox(target_text, indent_width, target_textbox_height, tb_bold, tb_color, tb_size, tb_fontname) 'Œ»İ‘I‘ğ‚µ‚Ä‚¢‚étextbox‚Ì‰º‚É‚ ‚é‘å‚«‚³‚Ìtarget-textbox‚ğ¶¬‚·‚é
+    Call create_target_textbox(target_text, indent_width, target_textbox_height, tb_bold, tb_color, tb_size, tb_fontname) 'ç¾åœ¨é¸æŠã—ã¦ã„ã‚‹textboxã®ä¸‹ã«ã‚ã‚‹å¤§ãã•ã®target-textboxã‚’ç”Ÿæˆã™ã‚‹
     
 End Sub
 
