@@ -33,8 +33,9 @@ SlideByTransWriter-main<br>
  ┣LICENSE<br>
  ┣README.md<br>
  ┣SlideByTransWriter.pptm　　　　動作確認兼アドイン作成用のパワポです<br>
+ ┣SlideByTransWriter.bas　　　　SlideByTransWriter.pptm内で動作しているVBAファイルです．セットアップに必要なし．<br>
  ┣translator.exe　　　　　　　　　翻訳を実行するexeファイルです．パワポのVBAでこれをたたきます<br>
- ┗translator.py　　　　　　　　 　exeファイルのもとになっているpythonです．<br>
+ ┗translator.py　　　　　　　　 　exeファイルのもとになっているpythonです．セットアップに必要なし．<br>
 
 ## セットアップ
 
